@@ -1,0 +1,97 @@
+//Get All Transactions
+GET http://localhost:3001/transactions HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsidXNlcl9uYW1lIjoiQWRtaW4ifSwiaWF0IjoxNjMwMDY4NDMwLCJleHAiOjE2MzAwNjk2MzB9.7pNx2CpoaMG5_iS-63jDQZJTjESMgwaKoT8OvJf3tNM
+
+###
+
+//Add New Transaction
+POST http://localhost:3001/transactions HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsidXNlcl9uYW1lIjoiQWRtaW4ifSwiaWF0IjoxNjMwMDY4NDMwLCJleHAiOjE2MzAwNjk2MzB9.7pNx2CpoaMG5_iS-63jDQZJTjESMgwaKoT8OvJf3tNM
+
+{
+    "totalPrice": 11,
+    "currency": "currency",
+    "cerditCardType": "cerdit_card_type",
+    "cerditCardNumber": "cerdit_card_number",
+    "customerId": 183067195
+}
+
+
+###
+
+//Update Transaction
+PUT http://localhost:3001/transactions HTTP/1.1
+content-type: application/json
+
+{
+    "id": 6,
+    "totalPrice": 12,
+    "currency": "currency",
+    "cerditCardType": "cerdit_card_type",
+    "cerditCardNumber": "cerdit_card_number"
+    
+}
+
+###
+
+//Delete Transaction
+DELETE  http://localhost:3001/transactions/6 HTTP/1.1
+
+###
+
+//Get All Customers
+GET http://localhost:3001/customers HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsidXNlcl9uYW1lIjoiQWRtaW4ifSwiaWF0IjoxNjMwMDU2NTY2LCJleHAiOjE2MzAwNTc3NjZ9.2ABTaVLqXmmOuk0lSJM2oKNFj7iA0fBgkdoBtx995zw
+
+###
+
+//Add New Customers
+POST http://localhost:3001/customers HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "firstName",
+    "lastName": "lastName",
+    "email": "email",
+    "gender": "gender",
+    "country": "country",
+    "city": "city",
+    "street": "street",
+    "phone": "phone"
+}
+
+
+###
+
+//Update Customer
+PUT http://localhost:3001/customers HTTP/1.1
+content-type: application/json
+
+{
+    "id": "813863132",
+    "firstName": "firstNameIsUpdated",
+    "lastName": "lastName",
+    "email": "email",
+    "gender": "gender",
+    "country": "country",
+    "city": "city",
+    "street": "street",
+    "phone": "phone"
+}
+
+###
+
+//Delete Customer
+DELETE  http://localhost:3001/customers/813863131 HTTP/1.1
+
+###
+
+//Login
+POST http://localhost:3001/users/ HTTP/1.1
+content-type: application/json
+
+{
+    "userName": "Admin",
+    "password": "123456"
+}
